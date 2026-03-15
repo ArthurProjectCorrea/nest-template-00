@@ -21,7 +21,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "semantic-release",
     "validate:workflow": "npm run build && npm run lint && npm run test",
     "init": "node scripts/init-template.mjs"
@@ -55,7 +55,7 @@
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.2",
     "globals": "^16.0.0",
-    "husky": "^8.0.3",
+    "husky": "^9.1.7",
     "jest": "^30.0.0",
     "lint-staged": "^14.0.1",
     "prettier": "^3.4.2",
@@ -70,14 +70,12 @@
     "typescript-eslint": "^8.20.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,ts}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
-    "*.{json,css,md,yml,yaml}": [
-      "prettier --write",
-      "git add"
+    "*.{json,css,md}": [
+      "prettier --write"
     ]
   },
   "jest": {
