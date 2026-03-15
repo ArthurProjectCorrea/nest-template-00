@@ -1,3 +1,9 @@
+# [1.2.0](https://github.com/ArthurProjectCorrea/nest-template-00/compare/v1.1.0...v1.2.0) (2026-03-15)
+
+### Features
+
+- add Husky Git hooks for linting, building, and commit message validation ([562e560](https://github.com/ArthurProjectCorrea/nest-template-00/commit/562e560cc74445cf4439c2a48a89919b0bcb1740))
+
 # [1.1.0](https://github.com/ArthurProjectCorrea/nest-template-00/compare/v1.0.0...v1.1.0) (2026-03-15)
 
 ### Features
