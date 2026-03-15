@@ -81,6 +81,7 @@ function amendFirstCommit() {
   }
   run('git add -A');
   run('git commit --amend -m "chore: first commit"');
+  run('git push --force');
   console.log('✓ Primeiro commit atualizado (mensagem: "chore: first commit")');
 }
 
@@ -99,10 +100,6 @@ if (repoName) {
 removeChangelog();
 amendFirstCommit();
 
-// Sugere o comando de dev conforme o que existe no package.json
-const pkgPath = path.join(root, 'package.json');
-const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-const devScript = pkg.scripts?.['start:dev'] ?? pkg.scripts?.dev ?? 'start:dev';
 console.log(
-  `\n✅ Próximos passos: npm install && npm run prepare && npm run ${devScript}\n`,
+  '\n✅ Próximos passos: npm install && npm run prepare && npm run dev\n',
 );

@@ -3,6 +3,7 @@ node_modules
 dist
 build
 coverage
+docs
 
 # Lockfiles (evita diff desnecessário)
 package-lock.json
