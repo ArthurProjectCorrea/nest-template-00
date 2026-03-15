@@ -26,15 +26,6 @@
     "validate:workflow": "npm run build && npm run lint && npm run test",
     "init": "node scripts/init-template.mjs"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
-    ]
-  },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
     "@nestjs/core": "^11.0.1",
@@ -77,6 +68,15 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   },
   "jest": {
     "moduleFileExtensions": [
